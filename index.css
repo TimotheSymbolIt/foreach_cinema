@@ -29,6 +29,13 @@ h2 {
 	font-size: 30px;
 }
 
+@media screen and (max-width: 1400px) {
+	nav ul,
+	#tarification_section {
+		padding: 0 10px;
+	}
+}
+
 /* Header */
 
 header {
@@ -152,12 +159,6 @@ ul .nav_link:hover {
 	cursor: pointer;
 }
 
-@media screen and (max-width: 1400px) {
-	ul {
-		padding: 0 10px;
-	}
-}
-
 /*  */
 
 /* Tarifs */
@@ -184,6 +185,17 @@ ul .nav_link:hover {
 
 	display: flex;
 	justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+	.tarification > div,
+	.tarification > p {
+		width: 50%;
+	}
+
+	.tarification > p {
+		text-align: end;
+	}
 }
 
 /*  */
