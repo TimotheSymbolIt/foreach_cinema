@@ -32,6 +32,7 @@ h2 {
 img {
 	width: 100%;
 	height: 100%;
+	border: white 5px solid;
 }
 
 @media screen and (max-width: 1400px) {
@@ -212,8 +213,6 @@ ul .nav_link:hover {
 	padding: 10px;
 }
 .movie_data {
-	background-color: pink;
-
 	display: flex;
 }
 
@@ -222,29 +221,69 @@ ul .nav_link:hover {
 }
 
 .img_container {
-	width: 100px;
+	width: 150px;
+	position: relative;
+}
+
+.heart_label {
+	background-color: rgb(255, 95, 95);
+	color: white;
+	padding: 5px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	font-size: 12px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .movie_description {
-	background-color: red;
-	padding: 10px;
+	padding: 0 10px;
 	width: 100%;
 
 	display: flex;
 }
 
 .movie_description_detail {
-	background-color: blue;
 	width: 50%;
 }
 
+.title_favorite {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 10px;
+}
+
+.title_favorite .title {
+	margin-right: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.title_favorite .material-icons:hover {
+	cursor: pointer;
+}
+
+.stars_ranking {
+	margin: 10px 0;
+	color: var(--color-primary);
+}
+
+.stars_ranking:hover {
+	cursor: pointer;
+}
+
 .movie_synopsis {
-	background-color: yellow;
 	width: 50%;
+	text-align: end;
 }
 
 .comedy_genre {
 	background-color: green;
+	padding: 10px;
+	color: white;
+	border-radius: 2px;
 }
 
 .session {
