@@ -2,6 +2,7 @@
 	--color-primary: #186cb0;
 	--color-dark-primary: #09528e;
 	--color-secondary: #ececec;
+	--color-dark-secondary: #cbcbcb;
 }
 
 @font-face {
@@ -27,6 +28,7 @@ ul {
 h2 {
 	color: var(--color-primary);
 	font-size: 30px;
+	margin-bottom: 10px;
 }
 
 img {
@@ -143,7 +145,7 @@ header {
 
 /* Navbar */
 
-ul {
+nav ul {
 	display: flex;
 	gap: 10px;
 
@@ -151,7 +153,7 @@ ul {
 	margin: 20px auto;
 }
 
-ul .nav_link {
+nav ul .nav_link {
 	background-color: var(--color-primary);
 	flex-basis: 0;
 	flex-grow: 1;
@@ -160,7 +162,7 @@ ul .nav_link {
 	text-align: center;
 }
 
-ul .nav_link:hover {
+nav ul .nav_link:hover {
 	background-color: var(--color-dark-primary);
 	cursor: pointer;
 }
@@ -172,6 +174,7 @@ ul .nav_link:hover {
 #tarification_section {
 	max-width: 1400px;
 	margin: auto;
+	margin-bottom: 30px;
 }
 
 #tarifications {
@@ -208,16 +211,25 @@ ul .nav_link:hover {
 
 /* Films */
 
-#movies {
-	background-color: var(--color-secondary);
-	padding: 10px;
-}
-.movie_data {
-	display: flex;
+#movies_section {
+	max-width: 1400px;
+	margin: auto;
+	margin-bottom: 30px;
 }
 
-.movie_session {
-	background-color: green;
+#movies {
+	padding: 0 20px;
+}
+
+.movie {
+	background-color: var(--color-secondary);
+	padding: 10px;
+
+	margin-bottom: 20px;
+}
+
+.movie_data {
+	display: flex;
 }
 
 .img_container {
@@ -278,18 +290,40 @@ ul .nav_link:hover {
 	width: 50%;
 	text-align: end;
 }
-
-.comedy_genre {
-	background-color: green;
-	padding: 10px;
-	color: white;
-	border-radius: 2px;
-}
-
 .session {
 	background-color: var(--color-primary);
+	padding: 10px;
+	border-radius: 5px;
 	width: 20%;
 	display: flex;
+	color: white;
+}
+
+.movie_session {
+	background-color: var(--color-dark-secondary);
+	padding: 10px;
+	margin-top: 10px;
+
+	display: flex;
+	gap: 10px;
+}
+
+.session_room,
+.session_hour {
+	width: 50%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.session .material-icons-outlined {
+	margin-bottom: 5px;
+}
+
+.full_label {
+	background-color: rgb(255, 255, 105);
+	padding: 5px;
+	color: black;
 }
 
 /*  */
