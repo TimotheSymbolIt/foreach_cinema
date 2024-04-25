@@ -20,6 +20,15 @@ ul {
 	list-style: none;
 }
 
+.text_bold {
+	font-weight: bold;
+}
+
+h2 {
+	color: var(--color-primary);
+	font-size: 30px;
+}
+
 /* Header */
 
 header {
@@ -147,6 +156,34 @@ ul .nav_link:hover {
 	ul {
 		padding: 0 10px;
 	}
+}
+
+/*  */
+
+/* Tarifs */
+
+#tarification_section {
+	max-width: 1400px;
+	margin: auto;
+}
+
+#tarifications {
+	display: flex;
+	flex-direction: column;
+
+	padding: 0px 20px;
+}
+
+.tarification {
+	background-color: var(--color-secondary);
+	width: 100%;
+	padding: 10px;
+	border-radius: 3px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+	display: flex;
+	justify-content: space-between;
 }
 
 /*  */
