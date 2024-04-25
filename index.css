@@ -1,5 +1,6 @@
 :root {
 	--color-primary: #186cb0;
+	--color-dark-primary: #09528e;
 	--color-secondary: #ececec;
 }
 
@@ -13,6 +14,10 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Uniform;
+}
+
+ul {
+	list-style: none;
 }
 
 /* Header */
@@ -110,6 +115,32 @@ header {
 	#jumbotron {
 		display: none;
 	}
+}
+
+/*  */
+
+/* Navbar */
+
+ul {
+	display: flex;
+	gap: 10px;
+
+	max-width: 1400px;
+	margin: 20px auto;
+}
+
+ul .nav_link {
+	background-color: var(--color-primary);
+	flex-basis: 0;
+	flex-grow: 1;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+ul .nav_link:hover {
+	background-color: var(--color-dark-primary);
+	cursor: pointer;
 }
 
 /*  */
