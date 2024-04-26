@@ -1,0 +1,432 @@
+:root {
+	--color-primary: #186cb0;
+	--color-dark-primary: #09528e;
+	--color-secondary: #ececec;
+	--color-dark-secondary: #cbcbcb;
+}
+
+@font-face {
+	font-family: Uniform;
+	src: url(./assets/fonts/Uniform.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Uniform;
+}
+
+ul {
+	list-style: none;
+}
+
+.text_bold {
+	font-weight: bold;
+}
+
+h2 {
+	color: var(--color-primary);
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	border: white 5px solid;
+}
+
+@media screen and (max-width: 1400px) {
+	nav ul,
+	#tarification_section,
+	#movies_section {
+		padding: 0 10px;
+	}
+
+	.tarification:nth-of-type(2) {
+		margin-top: 10px;
+	}
+}
+
+/* Header */
+
+header {
+	background-color: var(--color-primary);
+	color: white;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 10px;
+}
+
+#header_nav {
+	display: flex;
+	align-items: center;
+}
+
+.header_link {
+	margin-left: 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.header_link:hover {
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.header_link:last-of-type {
+		display: none;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	.header_link {
+		font-size: 10px;
+	}
+}
+
+/*  */
+
+/* Jumbotron */
+
+#jumbotron {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+
+	height: 250px;
+	background-image: url(./assets/images/ad.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	max-width: 1400px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#jumbotron_play {
+	display: inline-block;
+	margin-right: 20px;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+#jumbotron_play p {
+	font-size: 20px;
+	white-space: pre-line;
+}
+
+#play_button {
+	background-color: #d03737;
+	padding: 10px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+#play_button:hover {
+	background-color: #b41919;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	#jumbotron {
+		display: none;
+	}
+}
+
+/*  */
+
+/* Navbar */
+
+nav ul {
+	display: flex;
+	gap: 10px;
+
+	max-width: 1400px;
+	margin: 20px auto;
+}
+
+nav ul .nav_link {
+	background-color: var(--color-primary);
+	flex-basis: 0;
+	flex-grow: 1;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+nav ul .nav_link:hover {
+	background-color: var(--color-dark-primary);
+	cursor: pointer;
+}
+
+/*  */
+
+/* Tarifs */
+
+#tarification_section {
+	max-width: 1400px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+#tarifications {
+	display: flex;
+	flex-direction: column;
+
+	padding: 0px 20px;
+}
+
+.tarification {
+	background-color: var(--color-secondary);
+	width: 100%;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+	.tarification > div,
+	.tarification > p {
+		width: 50%;
+	}
+
+	.tarification > p {
+		text-align: end;
+	}
+}
+
+/*  */
+
+/* Films */
+
+#movies_section {
+	max-width: 1400px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+#movies {
+	padding: 0 20px;
+}
+
+.movie {
+	background-color: var(--color-secondary);
+	padding: 10px;
+
+	margin-bottom: 20px;
+}
+
+.movie_data {
+	display: flex;
+}
+
+.img_container {
+	width: 150px;
+	position: relative;
+}
+
+.heart_label {
+	background-color: rgb(255, 95, 95);
+	color: white;
+	padding: 5px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	font-size: 12px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.movie_description {
+	padding: 0 10px;
+	width: 100%;
+
+	display: flex;
+}
+
+.movie_description_detail {
+	width: 50%;
+}
+
+.title_favorite {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 10px;
+}
+
+.title_favorite .title {
+	margin-right: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.title_favorite .material-icons:hover {
+	cursor: pointer;
+}
+
+.stars_ranking {
+	margin: 10px 0;
+	color: var(--color-primary);
+}
+
+.stars_ranking:hover {
+	cursor: pointer;
+}
+
+.movie_synopsis {
+	width: 50%;
+	text-align: end;
+}
+.session {
+	background-color: var(--color-primary);
+	padding: 10px;
+	border-radius: 5px;
+	width: 20%;
+	display: flex;
+	color: white;
+}
+
+.session:hover {
+	background-color: var(--color-dark-primary);
+	cursor: pointer;
+}
+
+.movie_session {
+	background-color: var(--color-dark-secondary);
+	padding: 10px;
+	margin-top: 10px;
+
+	display: flex;
+	gap: 10px;
+}
+
+.comedy_genre {
+	background-color: rgb(3, 158, 3);
+	padding: 5px;
+}
+
+.action_genre {
+	background-color: rgb(209, 29, 209);
+	padding: 5px;
+}
+
+.sf_genre {
+	background-color: rgb(237, 116, 41);
+	padding: 5px;
+}
+
+.session_room,
+.session_hour {
+	width: 50%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.session .material-icons-outlined {
+	margin-bottom: 5px;
+}
+
+.full_label {
+	background-color: rgb(255, 255, 105);
+	padding: 5px;
+	color: black;
+}
+
+@media screen and (max-width: 600px) {
+	.movie_data {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.movie_description,
+	.movie_description_detail {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.movie_synopsis,
+	.movie_description_detail {
+		width: 100%;
+	}
+
+	.movie_synopsis {
+		text-align: center;
+	}
+
+	.comedy_genre {
+		margin-bottom: 5px;
+	}
+
+	.movie_session {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.session {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+	.session {
+		width: 33.3%;
+	}
+}
+
+/*  */
+
+/* Barre publicité */
+
+#ad {
+	background-color: rgb(235, 235, 68);
+
+	display: flex;
+	position: fixed;
+	width: 100%;
+}
+
+#ad p {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#ad span {
+	padding: 10px;
+}
+
+#ad span:hover {
+	background-color: rgb(220, 220, 33);
+	cursor: pointer;
+}
+
+/*  */

@@ -3,10 +3,238 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./index.css" />
 		<title>Document</title>
 	</head>
 	<body>
-        
-    </body>
+		<div id="ad">
+			<p>Abonnez-vous à ForEach Cinema ! 19€99 par mois seulement !</p>
+			<span class="material-icons" onclick="closeAd()"> close </span>
+		</div>
+		<header>
+			<h1>ForEach Cinema</h1>
+			<div id="header_nav">
+				<div class="header_link">
+					<span class="material-icons"> face </span>
+					<span>Mon Compte</span>
+				</div>
+				<div class="header_link">
+					<span class="material-icons"> work </span>
+					<span>Espace Pro</span>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="jumbotron">
+				<div id="jumbotron_play">
+					<p>Tentez de gagner 2 places</p>
+					<p>pour le formateur</p>
+					<p id="play_button">Jouer</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li class="nav_link">Tarifs</li>
+					<li class="nav_link">Films</li>
+				</ul>
+			</nav>
+			<section id="tarification_section">
+				<h2>Tarifs</h2>
+				<ul id="tarifications">
+					<li class="tarification">
+						<div>
+							<span class="text_bold">ForEach Illimity</span>
+							<p>Valable tous les jours, à toutes les séances</p>
+						</div>
+						<p>19€99/par mois</p>
+					</li>
+					<li class="tarification">
+						<div>
+							<span class="text_bold">ForEach Solo</span>
+							<p>Valable tous les jours, à toutes les séances</p>
+						</div>
+						<p>9€99/la séance</p>
+					</li>
+				</ul>
+			</section>
+			<section id="movies_section">
+				<h2>Films</h2>
+				<ul id="movies">
+					<li class="movie">
+						<div class="movie_data">
+							<div class="img_container">
+								<img
+									src="./assets/images/moviesImages/le_formateur_poster.JPG"
+									alt="Poster du très grand film 'Le Formateur'"
+								/>
+								<p class="heart_label">Coup de Coeur</p>
+							</div>
+							<div class="movie_description">
+								<div class="movie_description_detail">
+									<div class="title_favorite">
+										<span class="title">Le Formateur</span>
+										<span
+											class="material-icons heart_icon"
+											onclick="makeFavorite(0)"
+										>
+											favorite_border
+										</span>
+									</div>
+									<p>Sortie le 5 mai 2024</p>
+									<div class="stars_ranking">
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> grade </span>
+									</div>
+									<span class="comedy_genre">Comédie</span>
+								</div>
+								<p class="movie_synopsis">
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+									Incidunt deleniti quod nobis fuga officia molestias vero ut,
+									accusamus distinctio dolorum fugiat et iusto saepe maiores
+									quas, sit consequatur nisi sequi accusantium. Quisquam numquam
+									itaque delectus veritatis modi harum, iste reiciendis
+									blanditiis id aliquam laboriosam doloribus tenetur, aut
+									possimus beatae assumenda quibusdam? Cumque saepe ex vitae
+									atque modi magni obcaecati error qui id voluptatibus
+									reiciendis, beatae consequatur voluptatum at totam illum eius
+									sit quasi praesentium! Rerum earum eveniet est itaque nulla.
+								</p>
+							</div>
+						</div>
+						<ul class="movie_session">
+							<li class="session">
+								<div class="session_room">
+									<span class="material-icons-outlined"> desktop_windows </span>
+									<span class="room_name">Salle 1</span>
+									<span class="full_label">Complet</span>
+								</div>
+								<div class="session_hour">
+									<span class="material-icons-outlined"> schedule </span>
+									<span>12h00</span>
+									<span>(14h00)</span>
+								</div>
+							</li>
+							<li class="session">
+								<div class="session_room">
+									<span class="material-icons-outlined"> desktop_windows </span>
+									<span class="room_name">Salle 1</span>
+								</div>
+								<div class="session_hour">
+									<span class="material-icons-outlined"> schedule </span>
+									<span>16h50</span>
+									<span>(18h50)</span>
+								</div>
+							</li>
+							<li class="session">
+								<div class="session_room">
+									<span class="material-icons-outlined"> desktop_windows </span>
+									<span class="room_name">Salle 1</span>
+								</div>
+								<div class="session_hour">
+									<span class="material-icons-outlined"> schedule </span>
+									<span>21h00</span>
+									<span>(23h00)</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="movie">
+						<div class="movie_data">
+							<div class="img_container">
+								<img
+									src="./assets/images/moviesImages/aucun_visuel_poster.png"
+									alt="Aucun poster de film"
+								/>
+							</div>
+							<div class="movie_description">
+								<div class="movie_description_detail">
+									<div class="title_favorite">
+										<span class="title">Ma vie de dev</span>
+										<span
+											class="material-icons heart_icon"
+											onclick="makeFavorite(1)"
+										>
+											favorite_border
+										</span>
+									</div>
+									<p>Sortie le 28 Avril 2024</p>
+									<div class="stars_ranking">
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> star </span>
+										<span class="material-icons-outlined"> grade </span>
+									</div>
+									<div class="genres">
+										<span class="sf_genre">SF</span>
+										<span class="action_genre">Action</span>
+									</div>
+								</div>
+								<p class="movie_synopsis">
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+									Incidunt deleniti quod nobis fuga officia molestias vero ut,
+									accusamus distinctio dolorum fugiat et iusto saepe maiores
+									quas, sit consequatur nisi sequi accusantium. Quisquam numquam
+									itaque delectus veritatis modi harum, iste reiciendis
+									blanditiis id aliquam laboriosam doloribus tenetur, aut
+									possimus beatae assumenda quibusdam? Cumque saepe ex vitae
+									atque modi magni obcaecati error qui id voluptatibus
+									reiciendis, beatae consequatur voluptatum at totam illum eius
+									sit quasi praesentium! Rerum earum eveniet est itaque nulla.
+								</p>
+							</div>
+						</div>
+						<ul class="movie_session">
+							<li class="session">
+								<div class="session_room">
+									<span class="material-icons-outlined"> desktop_windows </span>
+									<span class="room_name">Salle 1</span>
+									<span class="full_label">Complet</span>
+								</div>
+								<div class="session_hour">
+									<span class="material-icons-outlined"> schedule </span>
+									<span>12h00</span>
+									<span>(14h00)</span>
+								</div>
+							</li>
+							<li class="session">
+								<div class="session_room">
+									<span class="material-icons-outlined"> desktop_windows </span>
+									<span class="room_name">Salle 1</span>
+								</div>
+								<div class="session_hour">
+									<span class="material-icons-outlined"> schedule </span>
+									<span>16h50</span>
+									<span>(18h50)</span>
+								</div>
+							</li>
+							<li class="session">
+								<div class="session_room">
+									<span class="material-icons-outlined"> desktop_windows </span>
+									<span class="room_name">Salle 1</span>
+								</div>
+								<div class="session_hour">
+									<span class="material-icons-outlined"> schedule </span>
+									<span>21h00</span>
+									<span>(23h00)</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<script src="./index.js"></script>
+	</body>
 </html>
