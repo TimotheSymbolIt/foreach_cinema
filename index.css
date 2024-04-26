@@ -408,6 +408,8 @@ nav ul .nav_link:hover {
 	background-color: rgb(235, 235, 68);
 
 	display: flex;
+	position: fixed;
+	width: 100%;
 }
 
 #ad p {
