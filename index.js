@@ -9,3 +9,8 @@ function makeFavorite(index) {
 		hearts[index].style.color = "black";
 	}
 }
+
+function closeAd() {
+	var ad = document.getElementById("ad");
+	ad.style.display = "none";
+}
