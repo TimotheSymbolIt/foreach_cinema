@@ -17,6 +17,10 @@
 	font-family: Uniform;
 }
 
+a {
+	all: unset;
+}
+
 ul {
 	list-style: none;
 }
